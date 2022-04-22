@@ -1,0 +1,55 @@
+//Write a java prog for employee using OOPs Concepts
+import java.util.Scanner;
+abstract class Employee  //ABSTRACT CLASS
+{
+abstract void details();
+}
+class Account extends Employee  //INHERITANCE
+{
+double id;
+long jd;
+long mn;
+float bal;
+String name,eid,bname;
+private int acno;  //DATA ENCAPSULATION
+private int pin;
+void details()
+{
+Scanner s=new Scanner(System.in);
+System.out.println("Account Number");
+int acno=Integer.parseInt(s.nextLine());
+System.out.println("Enter Name");
+String name=s.nextLine();
+System.out.println("Enter Balance");
+float bal=Float.parseFloat(s.nextLine());
+System.out.println("Enter PIN");
+int pin=Integer.parseInt(s.nextLine());
+System.out.println("Enter Branch Name");
+String bname=s.nextLine();
+System.out.println("Enter Employee ID");
+double id=Double.parseDouble(s.nextLine());
+System.out.println("Enter a mobile number");
+long mn=Long.parseLong(s.nextLine());
+System.out.println("Enter Email-ID");
+String eid=s.nextLine();
+System.out.println("-----------------");
+System.out.println("Employee Details");
+System.out.println("-----------------");
+System.out.println("Account Number="+acno);
+System.out.println("Account Holder Name="+name);
+System.out.println("Account Balance="+bal);
+System.out.println("Password="+pin);
+System.out.println("Branch Name="+bname);
+System.out.println("Identity Number="+id);
+System.out.println("Mobile Number="+mn);
+System.out.println("Email id="+eid);
+}
+}
+class EmployeeDemo1
+{
+public static void main(String [] args) 
+{
+Employee ee=new Account(); //POLYMORPHISM
+   ee.details();
+}
+}
